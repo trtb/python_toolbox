@@ -1,7 +1,7 @@
 # python_toolbox
 A collection of Python scripts and functions.
 
-- [environment_check.py](src/environment_check.py)
+- Script: [environment_check.py](src/environment_check.py)
 
 ```bash
 usage: environment_check.py [-h] [-d] requirement_file
@@ -23,4 +23,20 @@ Requirement: opencv-python>=4.1.1           not satisfied!
 Requirement: ipython                        satisfied with ipython in python3.11/site-packages (from -r requirements.txt (line 34))
 Requirement: psutil                         satisfied with psutil in python3.11/site-packages (from -r requirements.txt (line 35))
 Some libraries are missing, you can try to run: pip install -U -r requirements.txt
+```
+
+- Function: [display_parameters](src/display_parameters.py)
+
+Decorator to display function input parameters.
+
+```python
+@display_parameters
+def a(v1, v2, v3=10, v4=18):
+    pass
+
+a(2, v2="t", v3=12)
+```
+
+```bash
+*** Execution of: display_parameters.a(2, v2=t, v3=12)
 ```
